@@ -1,0 +1,13 @@
+<p>homepage works!</p>
+
+
+<div class="container">
+    <div class="card"></div>
+    <button (click)="getPokemon()">Click for Blastoise!</button>
+</div>
+
+<div class="container">
+    <div *ngFor="let pokemon of pokemons" class="card">{{pokemon.name}}
+        <img src="{{ pokemon.sprites.front_default }}"/>
+    </div>
+</div>
