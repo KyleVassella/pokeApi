@@ -9,7 +9,7 @@
 </div> -->
 
 <div class="container">
-    <div *ngFor="let pokemon of pokemons" class="pokemon-card">
+    <div *ngFor="let pokemon of pokemons$ | async" class="pokemon-card">
         <div>
             <img src="{{ pokemon.sprites.front_default }}"/>
         </div>
