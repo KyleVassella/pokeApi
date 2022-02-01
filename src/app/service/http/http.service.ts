@@ -16,8 +16,8 @@ pokemonsUrl = 'https://pokeapi.co/api/v2/pokemon';
     return this.http.get(`${this.pokemonsUrl}?limit=151`);
   }
 
-  getPokemonDetails(name): Observable<any> {
-    return this.http.get(`${this.pokemonsUrl}/${name}`);
+  getPokemonDetails(route): Observable<any> {
+    return this.http.get(route);
   }
 
 

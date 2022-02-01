@@ -1,13 +1,19 @@
 <p>homepage works!</p>
 
+<input [(ngModel)]="twoWayProperty">
+<span>{{twoWayProperty}}</span>
 
-<div class="container">
+<!-- <div class="container">
     <div class="card"></div>
-    <button (click)="getPokemon()">Click for Blastoise!</button>
-</div>
+    <button (click)="getPokemon()">Click for Pokemon!</button>
+</div> -->
 
 <div class="container">
-    <div *ngFor="let pokemon of pokemons" class="card">{{pokemon.name}}
-        <img src="{{ pokemon.sprites.front_default }}"/>
+    <div *ngFor="let pokemon of pokemons" class="pokemon-card">
+        <div>
+            <img src="{{ pokemon.sprites.front_default }}"/>
+        </div>
+        <span style="display:flex;">#{{pokemon.id}}</span>
+        <span>{{pokemon.name | titlecase}}</span>
     </div>
 </div>
